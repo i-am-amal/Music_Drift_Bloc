@@ -87,7 +87,6 @@ class PlaylistViewPage extends StatelessWidget {
                         ),
                         trailing: IconButton(
                             onPressed: (() {
-                              // setState(() {
 
                               ///////////////////-------------Playlist checking ---------------------//////////////////////
 
@@ -95,9 +94,8 @@ class PlaylistViewPage extends StatelessWidget {
 
                               PlaylistDb.playlistNotifier.notifyListeners();
                               BlocProvider.of<PlayscreenBloc>(context)
-                                  .add(const PlayscreenEvent.refresh());
+                                  .add(const PlayscreenEvent.update());
 
-                              // });
                             }),
                             icon: !playlist.isValueIn(item.data![index].id)
                                 ? const Icon(
@@ -107,7 +105,8 @@ class PlaylistViewPage extends StatelessWidget {
                                 : const Icon(
                                     Icons.remove,
                                     color: Colors.red,
-                                  )),
+                                  ),
+                                  ),
                       );
                     }),
                     itemCount: item.data!.length,

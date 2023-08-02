@@ -12,33 +12,24 @@ import 'package:music_drift/widgets/get_songs.dart';
 import 'package:music_drift/widgets/miniplayer.dart';
 import 'package:music_drift/widgets/text.dart';
 import 'package:on_audio_query/on_audio_query.dart';
-import 'package:permission_handler/permission_handler.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../../../infrastructure/home_screen_functions.dart';
 
 class HomeScreen extends StatelessWidget {
   HomeScreen({super.key});
 
   List<SongModel> allSongs = [];
-
   final AudioPlayer audioPlayer = AudioPlayer();
-
   Icon playIcon = const Icon(Icons.play_arrow);
-
   final _audioQuery = OnAudioQuery();
-
   final _controller = TextEditingController();
 
   ///////////////////-------------Storage Permission---------------------//////////////////////
 
-  // @override
-  // void dispose() {
-  //   GetSongs.audioPlayer.dispose();
-  //   super.dispose();
-  // }
-
   @override
   Widget build(BuildContext context) {
-    requestStoragePermission(context);
+    requestStoragePermission(context,_audioQuery);
 
     return Container(
       decoration: BoxDecoration(
@@ -87,9 +78,7 @@ class HomeScreen extends StatelessWidget {
                     onChanged: (value) {
                       BlocProvider.of<HomeBloc>(context)
                           .add(HomeEvent.updateSearchText(value: value));
-                      // setState(() {
-                      //   searchText = value;
-                      // });
+                    
                     },
                     style: const TextStyle(
                         color: Color.fromARGB(255, 188, 173, 173)),
@@ -298,17 +287,5 @@ class HomeScreen extends StatelessWidget {
 
   ///////////////////-------------Request Storage Permission Function---------------------//////////////////////
 
-  void requestStoragePermission(context) async {
-    await Permission.storage.request();
-
-    if (!kIsWeb) {
-      bool permissionStatus = await _audioQuery.permissionsStatus();
-      if (!permissionStatus) {
-        await _audioQuery.permissionsRequest();
-        BlocProvider.of<HomeBloc>(context)
-            .add(const HomeEvent.permissionStatus());
-        // setState(() {});
-      }
-    }
-  }
+  
 }

@@ -28,19 +28,11 @@ class PlayScreen extends StatefulWidget {
 ValueNotifier<List<SongModel>> playingSongNotifier = ValueNotifier([]);
 
 class _MiniPlayerState extends State<PlayScreen> {
-  // Duration duration = const Duration();
-
-  // Duration _position = const Duration();
-
-  // int currentIndex = 0;
 
   @override
   void initState() {
     GetSongs.audioPlayer.currentIndexStream.listen((index) {
       if (index != null && mounted) {
-        // setState(() {
-        //   currentIndex = index;
-        // });
 
         BlocProvider.of<PlayscreenBloc>(context)
             .add(PlayscreenEvent.currentIndex(index: index));
@@ -55,17 +47,12 @@ class _MiniPlayerState extends State<PlayScreen> {
 
   void sliderFuntion() {
     GetSongs.audioPlayer.durationStream.listen((time) {
-      // setState(() {
-      //   duration = time!;
-      // });
-
+  
       BlocProvider.of<PlayscreenBloc>(context)
           .add(PlayscreenEvent.setTime(time: time!));
     });
     GetSongs.audioPlayer.positionStream.listen((pos) {
-      // setState(() {
-      //   _position = pos;
-      // });
+   
       BlocProvider.of<PlayscreenBloc>(context)
           .add(PlayscreenEvent.setPosition(position: pos));
     });
@@ -208,12 +195,9 @@ class _MiniPlayerState extends State<PlayScreen> {
                       min: const Duration(microseconds: 0).inSeconds.toDouble(),
                       max: state.duration.inSeconds.toDouble(),
                       onChanged: ((value) {
-//////////////////////////////////////////////////////////////////
-                        // setState(() {
+
                         changeToSeconds(value.toInt());
-                        // value = value;
-                        // });
-/////////////////////////////////////////////////////////////////
+          
                       })),
                   Padding(
                     padding: const EdgeInsets.only(left: 20, right: 15),
@@ -272,7 +256,6 @@ class _MiniPlayerState extends State<PlayScreen> {
                       ),
                       IconButton(
                         onPressed: () {
-                          // setState(() {
                           ///////////////////-------------Database Adding---------------------//////////////////////
 
                           RecentsDb.addRecents(
@@ -289,7 +272,6 @@ class _MiniPlayerState extends State<PlayScreen> {
                             GetSongs.audioPlayer.play();
                           }
 
-                          // });
                         },
                         icon: const Icon(
                           Icons.skip_previous_outlined,
@@ -329,7 +311,6 @@ class _MiniPlayerState extends State<PlayScreen> {
                       ),
                       IconButton(
                         onPressed: () async {
-                          // setState(() async {
                           ///////////////////-------------Database Adding---------------------//////////////////////
 
                           RecentsDb.addRecents(
@@ -345,7 +326,6 @@ class _MiniPlayerState extends State<PlayScreen> {
                           } else {
                             await GetSongs.audioPlayer.play();
                           }
-                          // });
                         },
                         icon: const Icon(
                           Icons.skip_next_outlined,

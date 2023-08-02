@@ -6,6 +6,6 @@ class PlayscreenState with _$PlayscreenState {
    required int currentIndex,
    required Duration duration,
    required Duration position,
-   bool? refreshVariable,
+   bool? updateVariable,
   }) = _Initial;
 }

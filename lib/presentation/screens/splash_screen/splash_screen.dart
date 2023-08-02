@@ -6,7 +6,6 @@ import '../../../widgets/bg.dart';
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
 
-  // @override
   @override
   Widget build(BuildContext context) {
     Future.delayed(

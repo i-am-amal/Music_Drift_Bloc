@@ -15,7 +15,7 @@ const factory PlayscreenEvent.setPosition({
    required Duration position,
   }) = _SetPosition;
 
-  const factory PlayscreenEvent.refresh() = _Refresh;
+  const factory PlayscreenEvent.update() = _Update;
 
 
 }

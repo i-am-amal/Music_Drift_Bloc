@@ -15,7 +15,6 @@ import 'package:music_drift/presentation/screens/favourite_screen/favourite_scre
 
 class BottomNavBar extends StatelessWidget {
   BottomNavBar({super.key});
-  // int _selectedIndex = 0;
   final List<Widget> bottomNavOptions = <Widget>[
     HomeScreen(),
     FavouriteScreen(),
@@ -83,10 +82,6 @@ class BottomNavBar extends StatelessWidget {
 
                     FavouriteDb.favouriteSongs.notifyListeners();
                     playingSongNotifier.notifyListeners();
-
-                    // setState(() {
-                    // _selectedIndex = index;
-                    // });
                   },
                 ),
               ]);

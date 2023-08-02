@@ -21,7 +21,7 @@ mixin _$PlayscreenEvent {
     required TResult Function(int index) currentIndex,
     required TResult Function(Duration time) setTime,
     required TResult Function(Duration position) setPosition,
-    required TResult Function() refresh,
+    required TResult Function() update,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -29,7 +29,7 @@ mixin _$PlayscreenEvent {
     TResult? Function(int index)? currentIndex,
     TResult? Function(Duration time)? setTime,
     TResult? Function(Duration position)? setPosition,
-    TResult? Function()? refresh,
+    TResult? Function()? update,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -37,7 +37,7 @@ mixin _$PlayscreenEvent {
     TResult Function(int index)? currentIndex,
     TResult Function(Duration time)? setTime,
     TResult Function(Duration position)? setPosition,
-    TResult Function()? refresh,
+    TResult Function()? update,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -46,7 +46,7 @@ mixin _$PlayscreenEvent {
     required TResult Function(_CurrentIndex value) currentIndex,
     required TResult Function(_SetTime value) setTime,
     required TResult Function(_SetPosition value) setPosition,
-    required TResult Function(_Refresh value) refresh,
+    required TResult Function(_Update value) update,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -54,7 +54,7 @@ mixin _$PlayscreenEvent {
     TResult? Function(_CurrentIndex value)? currentIndex,
     TResult? Function(_SetTime value)? setTime,
     TResult? Function(_SetPosition value)? setPosition,
-    TResult? Function(_Refresh value)? refresh,
+    TResult? Function(_Update value)? update,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -62,7 +62,7 @@ mixin _$PlayscreenEvent {
     TResult Function(_CurrentIndex value)? currentIndex,
     TResult Function(_SetTime value)? setTime,
     TResult Function(_SetPosition value)? setPosition,
-    TResult Function(_Refresh value)? refresh,
+    TResult Function(_Update value)? update,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -153,7 +153,7 @@ class _$_CurrentIndex implements _CurrentIndex {
     required TResult Function(int index) currentIndex,
     required TResult Function(Duration time) setTime,
     required TResult Function(Duration position) setPosition,
-    required TResult Function() refresh,
+    required TResult Function() update,
   }) {
     return currentIndex(index);
   }
@@ -164,7 +164,7 @@ class _$_CurrentIndex implements _CurrentIndex {
     TResult? Function(int index)? currentIndex,
     TResult? Function(Duration time)? setTime,
     TResult? Function(Duration position)? setPosition,
-    TResult? Function()? refresh,
+    TResult? Function()? update,
   }) {
     return currentIndex?.call(index);
   }
@@ -175,7 +175,7 @@ class _$_CurrentIndex implements _CurrentIndex {
     TResult Function(int index)? currentIndex,
     TResult Function(Duration time)? setTime,
     TResult Function(Duration position)? setPosition,
-    TResult Function()? refresh,
+    TResult Function()? update,
     required TResult orElse(),
   }) {
     if (currentIndex != null) {
@@ -190,7 +190,7 @@ class _$_CurrentIndex implements _CurrentIndex {
     required TResult Function(_CurrentIndex value) currentIndex,
     required TResult Function(_SetTime value) setTime,
     required TResult Function(_SetPosition value) setPosition,
-    required TResult Function(_Refresh value) refresh,
+    required TResult Function(_Update value) update,
   }) {
     return currentIndex(this);
   }
@@ -201,7 +201,7 @@ class _$_CurrentIndex implements _CurrentIndex {
     TResult? Function(_CurrentIndex value)? currentIndex,
     TResult? Function(_SetTime value)? setTime,
     TResult? Function(_SetPosition value)? setPosition,
-    TResult? Function(_Refresh value)? refresh,
+    TResult? Function(_Update value)? update,
   }) {
     return currentIndex?.call(this);
   }
@@ -212,7 +212,7 @@ class _$_CurrentIndex implements _CurrentIndex {
     TResult Function(_CurrentIndex value)? currentIndex,
     TResult Function(_SetTime value)? setTime,
     TResult Function(_SetPosition value)? setPosition,
-    TResult Function(_Refresh value)? refresh,
+    TResult Function(_Update value)? update,
     required TResult orElse(),
   }) {
     if (currentIndex != null) {
@@ -297,7 +297,7 @@ class _$_SetTime implements _SetTime {
     required TResult Function(int index) currentIndex,
     required TResult Function(Duration time) setTime,
     required TResult Function(Duration position) setPosition,
-    required TResult Function() refresh,
+    required TResult Function() update,
   }) {
     return setTime(time);
   }
@@ -308,7 +308,7 @@ class _$_SetTime implements _SetTime {
     TResult? Function(int index)? currentIndex,
     TResult? Function(Duration time)? setTime,
     TResult? Function(Duration position)? setPosition,
-    TResult? Function()? refresh,
+    TResult? Function()? update,
   }) {
     return setTime?.call(time);
   }
@@ -319,7 +319,7 @@ class _$_SetTime implements _SetTime {
     TResult Function(int index)? currentIndex,
     TResult Function(Duration time)? setTime,
     TResult Function(Duration position)? setPosition,
-    TResult Function()? refresh,
+    TResult Function()? update,
     required TResult orElse(),
   }) {
     if (setTime != null) {
@@ -334,7 +334,7 @@ class _$_SetTime implements _SetTime {
     required TResult Function(_CurrentIndex value) currentIndex,
     required TResult Function(_SetTime value) setTime,
     required TResult Function(_SetPosition value) setPosition,
-    required TResult Function(_Refresh value) refresh,
+    required TResult Function(_Update value) update,
   }) {
     return setTime(this);
   }
@@ -345,7 +345,7 @@ class _$_SetTime implements _SetTime {
     TResult? Function(_CurrentIndex value)? currentIndex,
     TResult? Function(_SetTime value)? setTime,
     TResult? Function(_SetPosition value)? setPosition,
-    TResult? Function(_Refresh value)? refresh,
+    TResult? Function(_Update value)? update,
   }) {
     return setTime?.call(this);
   }
@@ -356,7 +356,7 @@ class _$_SetTime implements _SetTime {
     TResult Function(_CurrentIndex value)? currentIndex,
     TResult Function(_SetTime value)? setTime,
     TResult Function(_SetPosition value)? setPosition,
-    TResult Function(_Refresh value)? refresh,
+    TResult Function(_Update value)? update,
     required TResult orElse(),
   }) {
     if (setTime != null) {
@@ -443,7 +443,7 @@ class _$_SetPosition implements _SetPosition {
     required TResult Function(int index) currentIndex,
     required TResult Function(Duration time) setTime,
     required TResult Function(Duration position) setPosition,
-    required TResult Function() refresh,
+    required TResult Function() update,
   }) {
     return setPosition(position);
   }
@@ -454,7 +454,7 @@ class _$_SetPosition implements _SetPosition {
     TResult? Function(int index)? currentIndex,
     TResult? Function(Duration time)? setTime,
     TResult? Function(Duration position)? setPosition,
-    TResult? Function()? refresh,
+    TResult? Function()? update,
   }) {
     return setPosition?.call(position);
   }
@@ -465,7 +465,7 @@ class _$_SetPosition implements _SetPosition {
     TResult Function(int index)? currentIndex,
     TResult Function(Duration time)? setTime,
     TResult Function(Duration position)? setPosition,
-    TResult Function()? refresh,
+    TResult Function()? update,
     required TResult orElse(),
   }) {
     if (setPosition != null) {
@@ -480,7 +480,7 @@ class _$_SetPosition implements _SetPosition {
     required TResult Function(_CurrentIndex value) currentIndex,
     required TResult Function(_SetTime value) setTime,
     required TResult Function(_SetPosition value) setPosition,
-    required TResult Function(_Refresh value) refresh,
+    required TResult Function(_Update value) update,
   }) {
     return setPosition(this);
   }
@@ -491,7 +491,7 @@ class _$_SetPosition implements _SetPosition {
     TResult? Function(_CurrentIndex value)? currentIndex,
     TResult? Function(_SetTime value)? setTime,
     TResult? Function(_SetPosition value)? setPosition,
-    TResult? Function(_Refresh value)? refresh,
+    TResult? Function(_Update value)? update,
   }) {
     return setPosition?.call(this);
   }
@@ -502,7 +502,7 @@ class _$_SetPosition implements _SetPosition {
     TResult Function(_CurrentIndex value)? currentIndex,
     TResult Function(_SetTime value)? setTime,
     TResult Function(_SetPosition value)? setPosition,
-    TResult Function(_Refresh value)? refresh,
+    TResult Function(_Update value)? update,
     required TResult orElse(),
   }) {
     if (setPosition != null) {
@@ -523,34 +523,33 @@ abstract class _SetPosition implements PlayscreenEvent {
 }
 
 /// @nodoc
-abstract class _$$_RefreshCopyWith<$Res> {
-  factory _$$_RefreshCopyWith(
-          _$_Refresh value, $Res Function(_$_Refresh) then) =
-      __$$_RefreshCopyWithImpl<$Res>;
+abstract class _$$_UpdateCopyWith<$Res> {
+  factory _$$_UpdateCopyWith(_$_Update value, $Res Function(_$_Update) then) =
+      __$$_UpdateCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_RefreshCopyWithImpl<$Res>
-    extends _$PlayscreenEventCopyWithImpl<$Res, _$_Refresh>
-    implements _$$_RefreshCopyWith<$Res> {
-  __$$_RefreshCopyWithImpl(_$_Refresh _value, $Res Function(_$_Refresh) _then)
+class __$$_UpdateCopyWithImpl<$Res>
+    extends _$PlayscreenEventCopyWithImpl<$Res, _$_Update>
+    implements _$$_UpdateCopyWith<$Res> {
+  __$$_UpdateCopyWithImpl(_$_Update _value, $Res Function(_$_Update) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_Refresh implements _Refresh {
-  const _$_Refresh();
+class _$_Update implements _Update {
+  const _$_Update();
 
   @override
   String toString() {
-    return 'PlayscreenEvent.refresh()';
+    return 'PlayscreenEvent.update()';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_Refresh);
+        (other.runtimeType == runtimeType && other is _$_Update);
   }
 
   @override
@@ -562,9 +561,9 @@ class _$_Refresh implements _Refresh {
     required TResult Function(int index) currentIndex,
     required TResult Function(Duration time) setTime,
     required TResult Function(Duration position) setPosition,
-    required TResult Function() refresh,
+    required TResult Function() update,
   }) {
-    return refresh();
+    return update();
   }
 
   @override
@@ -573,9 +572,9 @@ class _$_Refresh implements _Refresh {
     TResult? Function(int index)? currentIndex,
     TResult? Function(Duration time)? setTime,
     TResult? Function(Duration position)? setPosition,
-    TResult? Function()? refresh,
+    TResult? Function()? update,
   }) {
-    return refresh?.call();
+    return update?.call();
   }
 
   @override
@@ -584,11 +583,11 @@ class _$_Refresh implements _Refresh {
     TResult Function(int index)? currentIndex,
     TResult Function(Duration time)? setTime,
     TResult Function(Duration position)? setPosition,
-    TResult Function()? refresh,
+    TResult Function()? update,
     required TResult orElse(),
   }) {
-    if (refresh != null) {
-      return refresh();
+    if (update != null) {
+      return update();
     }
     return orElse();
   }
@@ -599,9 +598,9 @@ class _$_Refresh implements _Refresh {
     required TResult Function(_CurrentIndex value) currentIndex,
     required TResult Function(_SetTime value) setTime,
     required TResult Function(_SetPosition value) setPosition,
-    required TResult Function(_Refresh value) refresh,
+    required TResult Function(_Update value) update,
   }) {
-    return refresh(this);
+    return update(this);
   }
 
   @override
@@ -610,9 +609,9 @@ class _$_Refresh implements _Refresh {
     TResult? Function(_CurrentIndex value)? currentIndex,
     TResult? Function(_SetTime value)? setTime,
     TResult? Function(_SetPosition value)? setPosition,
-    TResult? Function(_Refresh value)? refresh,
+    TResult? Function(_Update value)? update,
   }) {
-    return refresh?.call(this);
+    return update?.call(this);
   }
 
   @override
@@ -621,18 +620,18 @@ class _$_Refresh implements _Refresh {
     TResult Function(_CurrentIndex value)? currentIndex,
     TResult Function(_SetTime value)? setTime,
     TResult Function(_SetPosition value)? setPosition,
-    TResult Function(_Refresh value)? refresh,
+    TResult Function(_Update value)? update,
     required TResult orElse(),
   }) {
-    if (refresh != null) {
-      return refresh(this);
+    if (update != null) {
+      return update(this);
     }
     return orElse();
   }
 }
 
-abstract class _Refresh implements PlayscreenEvent {
-  const factory _Refresh() = _$_Refresh;
+abstract class _Update implements PlayscreenEvent {
+  const factory _Update() = _$_Update;
 }
 
 /// @nodoc
@@ -640,25 +639,25 @@ mixin _$PlayscreenState {
   int get currentIndex => throw _privateConstructorUsedError;
   Duration get duration => throw _privateConstructorUsedError;
   Duration get position => throw _privateConstructorUsedError;
-  bool? get refreshVariable => throw _privateConstructorUsedError;
+  bool? get updateVariable => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(int currentIndex, Duration duration,
-            Duration position, bool? refreshVariable)
+            Duration position, bool? updateVariable)
         initial,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(int currentIndex, Duration duration, Duration position,
-            bool? refreshVariable)?
+            bool? updateVariable)?
         initial,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(int currentIndex, Duration duration, Duration position,
-            bool? refreshVariable)?
+            bool? updateVariable)?
         initial,
     required TResult orElse(),
   }) =>
@@ -695,7 +694,7 @@ abstract class $PlayscreenStateCopyWith<$Res> {
       {int currentIndex,
       Duration duration,
       Duration position,
-      bool? refreshVariable});
+      bool? updateVariable});
 }
 
 /// @nodoc
@@ -714,7 +713,7 @@ class _$PlayscreenStateCopyWithImpl<$Res, $Val extends PlayscreenState>
     Object? currentIndex = null,
     Object? duration = null,
     Object? position = null,
-    Object? refreshVariable = freezed,
+    Object? updateVariable = freezed,
   }) {
     return _then(_value.copyWith(
       currentIndex: null == currentIndex
@@ -729,9 +728,9 @@ class _$PlayscreenStateCopyWithImpl<$Res, $Val extends PlayscreenState>
           ? _value.position
           : position // ignore: cast_nullable_to_non_nullable
               as Duration,
-      refreshVariable: freezed == refreshVariable
-          ? _value.refreshVariable
-          : refreshVariable // ignore: cast_nullable_to_non_nullable
+      updateVariable: freezed == updateVariable
+          ? _value.updateVariable
+          : updateVariable // ignore: cast_nullable_to_non_nullable
               as bool?,
     ) as $Val);
   }
@@ -749,7 +748,7 @@ abstract class _$$_InitialCopyWith<$Res>
       {int currentIndex,
       Duration duration,
       Duration position,
-      bool? refreshVariable});
+      bool? updateVariable});
 }
 
 /// @nodoc
@@ -765,7 +764,7 @@ class __$$_InitialCopyWithImpl<$Res>
     Object? currentIndex = null,
     Object? duration = null,
     Object? position = null,
-    Object? refreshVariable = freezed,
+    Object? updateVariable = freezed,
   }) {
     return _then(_$_Initial(
       currentIndex: null == currentIndex
@@ -780,9 +779,9 @@ class __$$_InitialCopyWithImpl<$Res>
           ? _value.position
           : position // ignore: cast_nullable_to_non_nullable
               as Duration,
-      refreshVariable: freezed == refreshVariable
-          ? _value.refreshVariable
-          : refreshVariable // ignore: cast_nullable_to_non_nullable
+      updateVariable: freezed == updateVariable
+          ? _value.updateVariable
+          : updateVariable // ignore: cast_nullable_to_non_nullable
               as bool?,
     ));
   }
@@ -795,7 +794,7 @@ class _$_Initial implements _Initial {
       {required this.currentIndex,
       required this.duration,
       required this.position,
-      this.refreshVariable});
+      this.updateVariable});
 
   @override
   final int currentIndex;
@@ -804,11 +803,11 @@ class _$_Initial implements _Initial {
   @override
   final Duration position;
   @override
-  final bool? refreshVariable;
+  final bool? updateVariable;
 
   @override
   String toString() {
-    return 'PlayscreenState.initial(currentIndex: $currentIndex, duration: $duration, position: $position, refreshVariable: $refreshVariable)';
+    return 'PlayscreenState.initial(currentIndex: $currentIndex, duration: $duration, position: $position, updateVariable: $updateVariable)';
   }
 
   @override
@@ -822,13 +821,13 @@ class _$_Initial implements _Initial {
                 other.duration == duration) &&
             (identical(other.position, position) ||
                 other.position == position) &&
-            (identical(other.refreshVariable, refreshVariable) ||
-                other.refreshVariable == refreshVariable));
+            (identical(other.updateVariable, updateVariable) ||
+                other.updateVariable == updateVariable));
   }
 
   @override
   int get hashCode => Object.hash(
-      runtimeType, currentIndex, duration, position, refreshVariable);
+      runtimeType, currentIndex, duration, position, updateVariable);
 
   @JsonKey(ignore: true)
   @override
@@ -840,32 +839,32 @@ class _$_Initial implements _Initial {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(int currentIndex, Duration duration,
-            Duration position, bool? refreshVariable)
+            Duration position, bool? updateVariable)
         initial,
   }) {
-    return initial(currentIndex, duration, position, refreshVariable);
+    return initial(currentIndex, duration, position, updateVariable);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(int currentIndex, Duration duration, Duration position,
-            bool? refreshVariable)?
+            bool? updateVariable)?
         initial,
   }) {
-    return initial?.call(currentIndex, duration, position, refreshVariable);
+    return initial?.call(currentIndex, duration, position, updateVariable);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(int currentIndex, Duration duration, Duration position,
-            bool? refreshVariable)?
+            bool? updateVariable)?
         initial,
     required TResult orElse(),
   }) {
     if (initial != null) {
-      return initial(currentIndex, duration, position, refreshVariable);
+      return initial(currentIndex, duration, position, updateVariable);
     }
     return orElse();
   }
@@ -904,7 +903,7 @@ abstract class _Initial implements PlayscreenState {
       {required final int currentIndex,
       required final Duration duration,
       required final Duration position,
-      final bool? refreshVariable}) = _$_Initial;
+      final bool? updateVariable}) = _$_Initial;
 
   @override
   int get currentIndex;
@@ -913,7 +912,7 @@ abstract class _Initial implements PlayscreenState {
   @override
   Duration get position;
   @override
-  bool? get refreshVariable;
+  bool? get updateVariable;
   @override
   @JsonKey(ignore: true)
   _$$_InitialCopyWith<_$_Initial> get copyWith =>

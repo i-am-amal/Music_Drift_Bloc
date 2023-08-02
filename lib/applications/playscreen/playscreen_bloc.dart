@@ -24,10 +24,10 @@ class PlayscreenBloc extends Bloc<PlayscreenEvent, PlayscreenState> {
       emit(state.copyWith(position: position));
     });
 
- on<_Refresh>((event, emit) {
+ on<_Update>((event, emit) {
     
-      emit(state.copyWith(refreshVariable: true));
-        emit(state.copyWith(refreshVariable: null));
+      emit(state.copyWith(updateVariable: true));
+        emit(state.copyWith(updateVariable: null));
 
         
     });
