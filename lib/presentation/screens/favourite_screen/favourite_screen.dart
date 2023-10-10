@@ -13,7 +13,7 @@ import 'package:on_audio_query/on_audio_query.dart';
 import '../../../infrastructure/db_services/db_fav.dart';
 
 class FavouriteScreen extends StatelessWidget {
-   FavouriteScreen({super.key});
+  FavouriteScreen({super.key});
 
   final ScrollController _scrollController = ScrollController();
 
@@ -45,12 +45,13 @@ class FavouriteScreen extends StatelessWidget {
                           child: Text(
                             " Favourites",
                             style: TextStyle(
-                                fontFamily: 'Iceberg',
-                                color: Colors.white,
-                                fontWeight: FontWeight.w600,
-                                fontSize: 28,
-                                letterSpacing: 3,
-                                fontStyle: FontStyle.italic),
+                              fontFamily: 'Iceberg',
+                              color: Colors.white,
+                              fontWeight: FontWeight.w600,
+                              fontSize: 28,
+                              letterSpacing: 3,
+                              fontStyle: FontStyle.italic,
+                            ),
                           ),
                         ),
                       ],
@@ -63,10 +64,12 @@ class FavouriteScreen extends StatelessWidget {
                       children: [
                         InkWell(
                           ///////////////////-------------Recently Played---------------------//////////////////////
+
                           child: Container(
                             decoration: BoxDecoration(
-                                color: const Color.fromRGBO(43, 0, 50, 0.295),
-                                borderRadius: BorderRadius.circular(8)),
+                              color: const Color.fromRGBO(43, 0, 50, 0.295),
+                              borderRadius: BorderRadius.circular(8),
+                            ),
                             height: 40,
                             width: 150,
                             child: const Align(
@@ -74,9 +77,10 @@ class FavouriteScreen extends StatelessWidget {
                               child: Text(
                                 'Recently Played',
                                 style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.w600,
-                                    fontStyle: FontStyle.italic),
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w600,
+                                  fontStyle: FontStyle.italic,
+                                ),
                               ),
                             ),
                           ),
@@ -92,10 +96,12 @@ class FavouriteScreen extends StatelessWidget {
                         ),
                         InkWell(
                           ///////////////////-------------Mostly Played---------------------//////////////////////
+
                           child: Container(
                             decoration: BoxDecoration(
-                                color: const Color.fromRGBO(43, 0, 50, 0.295),
-                                borderRadius: BorderRadius.circular(8)),
+                              color: const Color.fromRGBO(43, 0, 50, 0.295),
+                              borderRadius: BorderRadius.circular(8),
+                            ),
                             height: 40,
                             width: 150,
                             child: const Align(
@@ -103,9 +109,10 @@ class FavouriteScreen extends StatelessWidget {
                               child: Text(
                                 'Mostly Played',
                                 style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.w600,
-                                    fontStyle: FontStyle.italic),
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w600,
+                                  fontStyle: FontStyle.italic,
+                                ),
                               ),
                             ),
                           ),
@@ -126,7 +133,9 @@ class FavouriteScreen extends StatelessWidget {
                     )
                   ],
                 ),
+
                 ///////////////////------------- Fav Songs---------------------//////////////////////
+
                 child: ValueListenableBuilder(
                     valueListenable: FavouriteDb.favouriteSongs,
                     builder:
@@ -154,7 +163,9 @@ class FavouriteScreen extends StatelessWidget {
                                             List<SongModel> favourlist = [
                                               ...favorData
                                             ];
+
                                             ///////////////////------------- Song Playing---------------------//////////////////////
+
                                             GetSongs.audioPlayer.setAudioSource(
                                                 GetSongs.createSongList(
                                                     favourlist),
@@ -174,7 +185,8 @@ class FavouriteScreen extends StatelessWidget {
                                             type: ArtworkType.AUDIO,
                                             nullArtworkWidget: const Image(
                                               image: AssetImage(
-                                                  "assets/images/music1.jpg"),
+                                                "assets/images/music1.jpg",
+                                              ),
                                               fit: BoxFit.fill,
                                               height: 45,
                                               width: 50,

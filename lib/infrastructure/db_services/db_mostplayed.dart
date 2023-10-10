@@ -44,12 +44,9 @@ class MostPlayedDb extends ChangeNotifier {
   static bool mostPlayedCheck(SongModel song) {
     for (var vals in mostPlayedDb.values) {
       if (vals.songId == song.id) {
-        // print('most played detected');
-        // print(vals.count);
         return true;
       }
     }
-    //print('not in most played');
     return false;
   }
 
@@ -64,9 +61,7 @@ class MostPlayedDb extends ChangeNotifier {
         if (vals.count != null) {
           currentCount = vals.count!;
         }
-        // print('most played added');
-        // print(vals.count);
-        // print('is the count');
+
         int newCount = currentCount + 1;
         MostPlay mostPlayObj =
             MostPlay(songId: song.id, count: newCount, index: vals.index);
@@ -85,7 +80,6 @@ class MostPlayedDb extends ChangeNotifier {
       mostPlayedDb.putAt(index, mostPlayObj);
       mostPlayedSongs.value.add(song);
       MostPlayedDb.mostPlayedSongs.notifyListeners();
-      // print('notifying..');
     }
   }
 

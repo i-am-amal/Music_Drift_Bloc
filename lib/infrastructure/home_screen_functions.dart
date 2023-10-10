@@ -12,7 +12,6 @@ void requestStoragePermission(context, audioQuery) async {
       await audioQuery.permissionsRequest();
       BlocProvider.of<HomeBloc>(context)
           .add(const HomeEvent.permissionStatus());
-      // setState(() {});
     }
   }
 }

@@ -69,7 +69,7 @@ class HomeScreen extends StatelessWidget {
                 const SizedBox(
                   height: 20,
                 ),
-                // Search field starts
+                //---------------------------------- Search field starts----------------------
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: TextField(
@@ -97,7 +97,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                //search field ends
+                //------------------search field ends----------------------------
 
                 const SizedBox(
                   height: 10,
@@ -285,7 +285,6 @@ class HomeScreen extends StatelessWidget {
     return suggestions;
   }
 
-  ///////////////////-------------Request Storage Permission Function---------------------//////////////////////
 
   
 }

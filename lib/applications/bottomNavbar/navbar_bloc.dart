@@ -8,10 +8,8 @@ part 'navbar_bloc.freezed.dart';
 class NavbarBloc extends Bloc<NavbarEvent, NavbarState> {
   NavbarBloc() : super(const _Initial(selectedIndex: 0)) {
     on<_UpdateNavbar>((event, emit) {
-
-
       int index = event.index;
-      emit(state.copyWith(selectedIndex : index));
+      emit(state.copyWith(selectedIndex: index));
     });
   }
 }

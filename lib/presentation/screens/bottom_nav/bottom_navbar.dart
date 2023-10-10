@@ -18,7 +18,7 @@ class BottomNavBar extends StatelessWidget {
   final List<Widget> bottomNavOptions = <Widget>[
     HomeScreen(),
     FavouriteScreen(),
-     PlaylistScreen(),
+    PlaylistScreen(),
     const SettingsScreen(),
   ];
 
@@ -28,7 +28,9 @@ class BottomNavBar extends StatelessWidget {
       builder: (context, state) {
         return Scaffold(
           body: IndexedStack(
-              index: state.selectedIndex, children: bottomNavOptions),
+            index: state.selectedIndex,
+            children: bottomNavOptions,
+          ),
           backgroundColor: Colors.transparent,
           bottomNavigationBar: ValueListenableBuilder(
             valueListenable: playingSongNotifier,

@@ -43,26 +43,26 @@ class MusicApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
-        providers: [
-          BlocProvider(
-            create: (context) => HomeBloc(),
-            child: Container(),
-          ),
-          BlocProvider(
-            create: (context) => PlayscreenBloc(),
-            child: Container(),
-          ),
-          BlocProvider(
-            create: (context) => NavbarBloc(),
-            child: Container(),
-          )
-        ],
-        child: MaterialApp(
-          theme: ThemeData(),
-          debugShowCheckedModeBanner: false,
-          title: 'Music Drift',
-          home: const SplashScreen(),
+      providers: [
+        BlocProvider(
+          create: (context) => HomeBloc(),
+          child: Container(),
         ),
-        );
+        BlocProvider(
+          create: (context) => PlayscreenBloc(),
+          child: Container(),
+        ),
+        BlocProvider(
+          create: (context) => NavbarBloc(),
+          child: Container(),
+        )
+      ],
+      child: MaterialApp(
+        theme: ThemeData(),
+        debugShowCheckedModeBanner: false,
+        title: 'Music Drift',
+        home: const SplashScreen(),
+      ),
+    );
   }
 }

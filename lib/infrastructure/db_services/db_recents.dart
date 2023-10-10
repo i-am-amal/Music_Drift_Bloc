@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:on_audio_query/on_audio_query.dart';
 
-class RecentsDb extends ChangeNotifier{
+class RecentsDb extends ChangeNotifier {
   static bool isRecent = false;
   static final recentDb = Hive.box<int>('recentsDB');
   static ValueNotifier<List<SongModel>> recentSongs = ValueNotifier([]);
@@ -40,26 +40,18 @@ class RecentsDb extends ChangeNotifier{
   ///////////////////-------------RecentSong Add---------------------//////////////////////
 
   static addRecents(SongModel song) async {
-    
-    //////////////////-----------changed-----------------/////////////////
-    // recentDb.add(song.id);
-    // recentSongs.value.add(song);
     if (!recentCheck(song)) {
       recentDb.add(song.id);
       recentSongs.value.add(song);
     } else {
       for (var vals in recentDb.values) {
         if (vals == song.id) {
-          ///////////////////////////
           delete(song.id);
           recentDb.add(song.id);
           recentSongs.value.add(song);
-
-          //////////////////////////////
         }
       }
     }
-//////////////////////////////////////////////////////////////////
     RecentsDb.recentSongs.notifyListeners();
   }
 

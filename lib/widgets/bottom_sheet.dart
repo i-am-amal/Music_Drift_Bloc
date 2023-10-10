@@ -6,14 +6,14 @@ import '../domain/model/audio_player.dart';
 
 class BottomSheetWidget {
   AudioPlayer? playlist;
-  
-///////////////////-------------Bottom Sheet For  Playlist  on Home Page---------------////////////////////////////////
 
+///////////////////-------------Bottom Sheet For  Playlist  on Home Page---------------////////////////////////////////
 
   void bottomSheet(context, int id, SongModel dataModel) {
     showModalBottomSheet(
         shape: const RoundedRectangleBorder(
-          borderRadius: BorderRadius.vertical(top: Radius.circular(16.0),
+          borderRadius: BorderRadius.vertical(
+            top: Radius.circular(16.0),
           ),
         ),
         context: context,
@@ -60,7 +60,6 @@ class BottomSheetWidget {
                                     physics: const ClampingScrollPhysics(),
                                     itemCount: musicList.length,
                                     itemBuilder: ((context, index) {
-                                      
                                       final data =
                                           musicList.values.toList()[index];
 

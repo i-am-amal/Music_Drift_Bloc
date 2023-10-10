@@ -86,27 +86,25 @@ class PlaylistViewPage extends StatelessWidget {
                           style: const TextStyle(color: Colors.white),
                         ),
                         trailing: IconButton(
-                            onPressed: (() {
+                          onPressed: (() {
+                            ///////////////////-------------Playlist checking ---------------------//////////////////////
 
-                              ///////////////////-------------Playlist checking ---------------------//////////////////////
+                            checkPlaylist(item.data![index], context);
 
-                              checkPlaylist(item.data![index], context);
-
-                              PlaylistDb.playlistNotifier.notifyListeners();
-                              BlocProvider.of<PlayscreenBloc>(context)
-                                  .add(const PlayscreenEvent.update());
-
-                            }),
-                            icon: !playlist.isValueIn(item.data![index].id)
-                                ? const Icon(
-                                    Icons.add,
-                                    color: Colors.white,
-                                  )
-                                : const Icon(
-                                    Icons.remove,
-                                    color: Colors.red,
-                                  ),
-                                  ),
+                            PlaylistDb.playlistNotifier.notifyListeners();
+                            BlocProvider.of<PlayscreenBloc>(context)
+                                .add(const PlayscreenEvent.update());
+                          }),
+                          icon: !playlist.isValueIn(item.data![index].id)
+                              ? const Icon(
+                                  Icons.add,
+                                  color: Colors.white,
+                                )
+                              : const Icon(
+                                  Icons.remove,
+                                  color: Colors.red,
+                                ),
+                        ),
                       );
                     }),
                     itemCount: item.data!.length,

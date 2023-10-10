@@ -28,15 +28,12 @@ class PlayScreen extends StatefulWidget {
 ValueNotifier<List<SongModel>> playingSongNotifier = ValueNotifier([]);
 
 class _MiniPlayerState extends State<PlayScreen> {
-
   @override
   void initState() {
     GetSongs.audioPlayer.currentIndexStream.listen((index) {
       if (index != null && mounted) {
-
         BlocProvider.of<PlayscreenBloc>(context)
             .add(PlayscreenEvent.currentIndex(index: index));
-
         GetSongs.currentIndexes = index;
       }
     });
@@ -47,12 +44,10 @@ class _MiniPlayerState extends State<PlayScreen> {
 
   void sliderFuntion() {
     GetSongs.audioPlayer.durationStream.listen((time) {
-  
       BlocProvider.of<PlayscreenBloc>(context)
           .add(PlayscreenEvent.setTime(time: time!));
     });
     GetSongs.audioPlayer.positionStream.listen((pos) {
-   
       BlocProvider.of<PlayscreenBloc>(context)
           .add(PlayscreenEvent.setPosition(position: pos));
     });
@@ -195,9 +190,7 @@ class _MiniPlayerState extends State<PlayScreen> {
                       min: const Duration(microseconds: 0).inSeconds.toDouble(),
                       max: state.duration.inSeconds.toDouble(),
                       onChanged: ((value) {
-
                         changeToSeconds(value.toInt());
-          
                       })),
                   Padding(
                     padding: const EdgeInsets.only(left: 20, right: 15),
@@ -271,7 +264,6 @@ class _MiniPlayerState extends State<PlayScreen> {
                           } else {
                             GetSongs.audioPlayer.play();
                           }
-
                         },
                         icon: const Icon(
                           Icons.skip_previous_outlined,

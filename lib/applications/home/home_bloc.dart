@@ -11,7 +11,6 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
       String value = event.value;
       emit(state.copyWith(searchText: value));
     });
-
     on<_PermissionStatus>((event, emit) {
       emit(state.copyWith(permission: true));
     });

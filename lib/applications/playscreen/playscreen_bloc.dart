@@ -7,8 +7,13 @@ part 'playscreen_bloc.freezed.dart';
 
 class PlayscreenBloc extends Bloc<PlayscreenEvent, PlayscreenState> {
   PlayscreenBloc()
-      : super(const _Initial(
-            currentIndex: 0, duration: Duration(), position: Duration())) {
+      : super(
+          const _Initial(
+            currentIndex: 0,
+            duration: Duration(),
+            position: Duration(),
+          ),
+        ) {
     on<_CurrentIndex>((event, emit) {
       int index = event.index;
       emit(state.copyWith(currentIndex: index));

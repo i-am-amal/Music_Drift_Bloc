@@ -120,7 +120,7 @@ class PlaylistScreen extends StatelessWidget {
                                                           return AlertDialog(
                                                             backgroundColor:
                                                                 const Color
-                                                                        .fromRGBO(
+                                                                    .fromRGBO(
                                                                     43,
                                                                     0,
                                                                     50,
@@ -292,7 +292,7 @@ class PlaylistScreen extends StatelessWidget {
                                                         return AlertDialog(
                                                           backgroundColor:
                                                               const Color
-                                                                      .fromRGBO(
+                                                                  .fromRGBO(
                                                                   43, 0, 50, 1),
                                                           shape:
                                                               RoundedRectangleBorder(

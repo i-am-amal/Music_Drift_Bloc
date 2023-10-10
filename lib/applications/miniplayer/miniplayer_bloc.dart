@@ -7,7 +7,6 @@ part 'miniplayer_bloc.freezed.dart';
 
 class MiniplayerBloc extends Bloc<MiniplayerEvent, MiniplayerState> {
   MiniplayerBloc() : super(const _Initial()) {
-    on<MiniplayerEvent>((event, emit) {
-    });
+    on<MiniplayerEvent>((event, emit) {});
   }
 }

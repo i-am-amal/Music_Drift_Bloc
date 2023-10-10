@@ -16,13 +16,16 @@ class TextWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(title,
-        style: TextStyle(
-            fontFamily: 'Iceberg',
-            fontSize: size,
-            fontWeight: FontWeight.w500,
-            color: textColor,
-            letterSpacing: 2,
-            fontStyle: style));
+    return Text(
+      title,
+      style: TextStyle(
+        fontFamily: 'Iceberg',
+        fontSize: size,
+        fontWeight: FontWeight.w500,
+        color: textColor,
+        letterSpacing: 2,
+        fontStyle: style,
+      ),
+    );
   }
 }
