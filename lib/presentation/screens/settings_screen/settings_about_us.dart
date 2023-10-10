@@ -51,7 +51,7 @@ class AboutUs {
                           ),
                         ),
                         TextSpan(
-                          text: 'Brocamp',
+                          text: 'A M A L',
                           style: TextStyle(
                               fontWeight: FontWeight.bold, color: Colors.red),
                         ),

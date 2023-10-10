@@ -9,7 +9,7 @@ class License {
           height: 80,
         ),
         applicationName: 'MUSIC DRIFT',
-        applicationVersion: 'V.1.0.1',
-        applicationLegalese: 'Made with love from Amal(Brocamp)');
+        applicationVersion: 'V.1.0.0',
+        applicationLegalese: 'Made with love from A M A L');
   }
 }

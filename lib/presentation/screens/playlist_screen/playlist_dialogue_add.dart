@@ -74,30 +74,31 @@ class DialogList {
               ),
             ),
             TextButton.icon(
-                onPressed: () {
-                  if (_formKey.currentState!.validate()) {
-                    final name = newPlaylistController.text.trimLeft();
-                    if (name.isEmpty) {
-                      return;
-                    } else {
-                      final music = AudioPlayer(name: name, songId: []);
+              onPressed: () {
+                if (_formKey.currentState!.validate()) {
+                  final name = newPlaylistController.text.trimLeft();
+                  if (name.isEmpty) {
+                    return;
+                  } else {
+                    final music = AudioPlayer(name: name, songId: []);
 
-                      PlaylistDb.playlistAdd(music);
-                      newPlaylistController.clear();
-                    }
-                    Navigator.of(context).pop();
+                    PlaylistDb.playlistAdd(music);
+                    newPlaylistController.clear();
                   }
-                },
-                icon: const Icon(
-                  Icons.playlist_add,
+                  Navigator.of(context).pop();
+                }
+              },
+              icon: const Icon(
+                Icons.playlist_add,
+                color: Colors.white,
+              ),
+              label: const Text(
+                'create',
+                style: TextStyle(
                   color: Colors.white,
                 ),
-                label: const Text(
-                  'create',
-                  style: TextStyle(
-                    color: Colors.white,
-                  ),
-                )),
+              ),
+            ),
           ],
         );
       }),

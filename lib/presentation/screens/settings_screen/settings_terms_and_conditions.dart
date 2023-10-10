@@ -27,7 +27,7 @@ class TermsAndConditions {
                 children:  [
                   Text(
                     """
-Last updated: March 30, 2023
+Last updated: October 01, 2023
 
 Please read these terms and conditions carefully before using Our Service.
 
