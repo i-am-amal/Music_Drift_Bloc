@@ -10,9 +10,9 @@ class TermsAndConditions {
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(10.0),
             ),
-            title:const Row(
+            title: const Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children:  [
+              children: [
                 Text(
                   "Terms And Conditions",
                   style: TextStyle(
@@ -22,12 +22,12 @@ class TermsAndConditions {
                 ),
               ],
             ),
-            content:const SingleChildScrollView(
+            content: const SingleChildScrollView(
               child: Column(
-                children:  [
+                children: [
                   Text(
                     """
-Last updated: October 01, 2023
+Last updated: December 05, 2023
 
 Please read these terms and conditions carefully before using Our Service.
 
