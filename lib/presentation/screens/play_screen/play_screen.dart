@@ -363,7 +363,7 @@ class _MiniPlayerState extends State<PlayScreen> {
   }
 }
 
-void changeToSeconds(int secoonds) {
-  Duration duration = Duration(seconds: secoonds);
+void changeToSeconds(int seconds) {
+  Duration duration = Duration(seconds: seconds);
   GetSongs.audioPlayer.seek(duration);
 }
