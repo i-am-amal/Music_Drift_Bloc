@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/adapters.dart';
 import 'package:music_drift/infrastructure/db_services/db_playlist.dart';
@@ -8,6 +9,7 @@ import 'package:music_drift/widgets/get_songs.dart';
 import 'package:on_audio_query/on_audio_query.dart';
 import '../../../domain/model/audio_player.dart';
 
+// ignore: must_be_immutable
 class PlaylistAddSongs extends StatelessWidget {
   PlaylistAddSongs(
       {Key? key, required this.playlist, required this.folderindex})
